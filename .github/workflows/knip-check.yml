@@ -7,11 +7,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - uses: oven-sh/setup-bun@v2
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: rc # Run with latest stable Deno.
+      - name: Install dependencies
+        run: deno install
 
-    - name: Install dependencies
-      run: bun install
-
-    - name: Run Knip
-      run: bun run knip
+      - name: Run Knip
+        run: deno task knip

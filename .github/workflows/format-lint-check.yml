@@ -7,10 +7,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup Biome
-      uses: biomejs/setup-biome@v2
-      with:
-        version: 1.8.3
-    - name: Run Biome
-      run: biome ci .
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: rc # Run with latest stable Deno.
+      - name: Run Format Check
+        run: |
+          deno install
+          deno task format:check

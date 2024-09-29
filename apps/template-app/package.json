@@ -6,15 +6,15 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "biome lint"
+    "lint": "deno lint"
   },
   "dependencies": {
     "next": "15.0.0-canary.140"
   },
   "devDependencies": {
-    "@types/node": "latest",
-    "@types/react": "latest",
-    "@types/react-dom": "latest",
+    "@types/node": "22.7.4",
+    "@types/react": "18.3.10",
+    "@types/react-dom": "18.3.0",
     "autoprefixer": "10.0.1",
     "postcss": "8.4.35",
     "tailwindcss": "3.3.0",
