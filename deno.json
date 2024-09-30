@@ -1,7 +1,10 @@
 {
-  "lint": {
-    "rules": {
-      "exclude": ["prefer-const"]
-    }
-  }
+	"lint": {
+		"rules": {
+			"exclude": ["prefer-const"]
+		}
+	},
+	"imports": {
+		"bun:test": "./bun-test-stub.ts"
+	}
 }
